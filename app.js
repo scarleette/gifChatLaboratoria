@@ -1,8 +1,10 @@
+
+
 function registrarConFireBase() {
     const correo = email.value;
     const clave = password.value;
     firebase.auth().createUserWithEmailAndPassword(correo, clave)
-    .then(response => {
+    .then(() => {
         console.log('usuario creado con exito');
     })
     .catch(error => {
@@ -14,9 +16,9 @@ function registrarConFireBase() {
 function loginConFireBase() {
     const correo = email.value;
     const clave = password.value;
-    firebase.auth().signInWithEmailAndPassword(correp, clave)
-    .then(response => {
-        console.log('usuario creado con exito');
+    firebase.auth().signInWithEmailAndPassword(correo, clave)
+    .then(() => {
+        console.log('usuario registrado');
     })
     .catch(error => {
         let errorCode = error.code;
