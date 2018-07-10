@@ -11,6 +11,32 @@
     <header>
         <h1>FireBase</h1>
     </header>
+    <div>
+        <!-- LOGIN -->
+        <div id="loggedIn">
+            <p id="username"></p>
+            <input id="logout" type="button" value="LOGOUT">
+        </div>
+        <!-- AUTENTIFICACION -->
+        <div id="loggedOut">
+            <input id="email" type="text">
+            <input id="password" type="password">
+            <input type="registerBoton" type="button" onclick="registrarConFireBase()" value="REGISTER">
+            <input type="logginBoton" type="button" value="LOGIN">
+        </div>
+    </div>
     <script src="app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+    <script>
+    var config = {
+      apiKey: "AIzaSyBfn7-C_RFYzTFlPvRtIe9FjI0LQ_KTLw8",
+      authDomain: "gifchatlaboratoria-6ef13.firebaseapp.com",
+      databaseURL: "https://gifchatlaboratoria-6ef13.firebaseio.com",
+      projectId: "gifchatlaboratoria-6ef13",
+      storageBucket: "gifchatlaboratoria-6ef13.appspot.com",
+      messagingSenderId: "384309965342"
+    };
+    firebase.initializeApp(config);
+  </script>
 </body>
 </html>
